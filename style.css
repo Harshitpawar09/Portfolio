@@ -10,9 +10,9 @@
     --font-display: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
     /* --- COLOR THEME (Red/Crimson and Orange/Gold) --- */
-    --primary-color: #d43a3a;      /* Your highlight color (Crimson/Red) */
-    --primary-dark: #ff5e5e;       /* Darker shade for hover/gradients */
-    --secondary-color: #d43a3a;    /* Complementary Orange/Gold */
+    --primary-color: #d43a3a;       /* Your highlight color (Crimson/Red) */
+    --primary-dark: #ff5e5e;        /* Darker shade for hover/gradients */
+    --secondary-color: #d43a3a;     /* Complementary Orange/Gold */
     --secondary-dark: #ffafaf;
     /* Base Colors */
     --gray-900: #111827;
@@ -44,11 +44,12 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* TEXT SIZE REDUCTION - Base font size reduction is generally not done on body unless necessary, but we will reduce the elements */
 }
 
 /* Fix for Content Overlap under Fixed Header */
 main {
-    padding-top: 80px; 
+    padding-top: 65px; /* Reduced from 80px to accommodate smaller header */
 }
 
 /* Base Container Settings */
@@ -72,14 +73,16 @@ header {
 }
 
 header .container {
-    padding: 20px 50px; 
+    /* NAV HEIGHT REDUCTION: top/bottom padding reduced from 20px to 12px */
+    padding: 12px 50px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 34px;
+    /* TEXT SIZE REDUCTION: Reduced from 34px to 30px */
+    font-size: 30px; 
     font-weight: bold;
     color: var(--primary-color);
     margin-left: 0;
@@ -95,7 +98,8 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    font-size: 18px;
+    /* TEXT SIZE REDUCTION: Reduced from 18px to 16px */
+    font-size: 16px; 
     color: #333;
     font-weight: 500;
     position: relative;
@@ -106,7 +110,8 @@ nav a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    /* HIGHLIGHT REDUCTION: Reduced from 2px to 1.5px */
+    height: 1.5px; 
     background: var(--secondary-color);
     left: 0;
     bottom: -5px;
@@ -123,10 +128,10 @@ nav a:hover {
 
 @media (max-width: 767px) {
     header .container {
-        padding: 15px 20px;
+        padding: 10px 20px; /* Reduced mobile padding */
     }
     .logo {
-        font-size: 28px;
+        font-size: 26px; /* Further reduced for mobile */
     }
     nav ul {
         display: none; 
@@ -161,12 +166,14 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 4.2rem;
+    /* TEXT SIZE REDUCTION: Reduced from 4.2rem to 3.5rem */
+    font-size: 3.5rem; 
     margin-bottom: 15px;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    /* TEXT SIZE REDUCTION: Reduced from 2.5rem to 2rem */
+    font-size: 2rem; 
     color: #444;
     margin-bottom: 25px;
     min-height: 40px;
@@ -175,7 +182,8 @@ nav a:hover {
 .description {
     max-width: 750px;
     margin: 25px 0;
-    font-size: 1.2rem;
+    /* TEXT SIZE REDUCTION: Reduced from 1.2rem to 1rem */
+    font-size: 1rem; 
     color: #555;
 }
 
@@ -212,9 +220,10 @@ nav a:hover {
 
 /* Global Section Title */
 .section-title {
-    font-size: 3rem;
+    /* TEXT SIZE REDUCTION: Reduced from 3rem to 2.5rem */
+    font-size: 2.5rem; 
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem; /* Adjusted margin to be proportional */
     color: #d43a3a;
 }
 
@@ -262,8 +271,8 @@ nav a:hover {
 }
 
 .experience-content:hover {
-    transform: translateX(10px) scale(1.02);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px) scale(1.01); /* HIGHLIGHT REDUCTION: Less aggressive hover effect */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
 }
 
 .experience-content:hover::before {
@@ -287,7 +296,8 @@ nav a:hover {
 
 
 .experience-header h3 {
-    font-size: 1.5rem;
+    /* TEXT SIZE REDUCTION: Reduced from 1.5rem to 1.3rem */
+    font-size: 1.3rem; 
     color: var(--gray-900);
     margin-bottom: 0.25rem;
 }
@@ -304,7 +314,8 @@ nav a:hover {
     align-items: center;
     gap: 0.5rem;
     color: var(--gray-600);
-    font-size: 0.9rem;
+    /* TEXT SIZE REDUCTION: Reduced from 0.9rem to 0.85rem */
+    font-size: 0.85rem; 
 }
 
 .experience-description {
@@ -317,6 +328,7 @@ nav a:hover {
     display: flex;
     align-items: flex-start;
     margin-bottom: 0.5rem;
+    /* TEXT SIZE REDUCTION: Inherits smaller body size */
 }
 
 .experience-description li::before {
@@ -353,13 +365,14 @@ nav a:hover {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px); /* HIGHLIGHT REDUCTION: Reduced hover lift */
+    box-shadow: 0 8px 10px -2px rgba(0, 0, 0, 0.1); /* Reduced shadow */
     border-color: #fee2e2;
 }
 
 .project-card h3 {
-    font-size: 1.5rem;
+    /* TEXT SIZE REDUCTION: Reduced from 1.5rem to 1.3rem */
+    font-size: 1.3rem; 
     color: var(--gray-900);
     margin-bottom: 0.75rem;
     transition: color 0.3s ease;
@@ -373,6 +386,7 @@ nav a:hover {
     color: var(--gray-700);
     line-height: 1.75;
     margin-bottom: 1rem;
+    /* TEXT SIZE REDUCTION: Inherits smaller body size */
 }
 
 .project-tags {
@@ -387,12 +401,13 @@ nav a:hover {
     background: linear-gradient(to right, #fef2f2, #ffeedd);
     color: var(--primary-dark);
     border-radius: 9999px;
-    font-size: 0.875rem;
+    /* TEXT SIZE REDUCTION: Reduced from 0.875rem to 0.8rem */
+    font-size: 0.8rem; 
     transition: transform 0.3s ease;
 }
 
 .project-tags span:hover {
-    transform: scale(1.05);
+    transform: scale(1.03); /* HIGHLIGHT REDUCTION: Slightly less hover scale */
 }
 
 .project-links {
@@ -411,7 +426,7 @@ nav a:hover {
 
 .project-links a:hover {
     color: var(--primary-color);
-    transform: translateX(5px);
+    transform: translateX(3px); /* HIGHLIGHT REDUCTION: Reduced hover translate */
 }
 
 /* -----------------------------------
@@ -441,12 +456,13 @@ nav a:hover {
 }
 
 .skill-category:hover {
-    transform: scale(1.01);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.005); /* HIGHLIGHT REDUCTION: Very subtle scale */
+    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
 }
 
 .skill-category h3 {
-    font-size: 1.5rem;
+    /* TEXT SIZE REDUCTION: Reduced from 1.5rem to 1.3rem */
+    font-size: 1.3rem; 
     color: var(--gray-900);
     margin-bottom: 1.5rem;
 }
@@ -458,18 +474,20 @@ nav a:hover {
 }
 
 .skill-tags span {
-    padding: 0.5rem 1rem;
+    /* HIGHLIGHT/SIZE REDUCTION: Reduced padding */
+    padding: 0.4rem 0.8rem; 
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     color: white;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: default;
+    /* TEXT SIZE REDUCTION: Inherits smaller body size */
 }
 
 .skill-tags span:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 8px 12px -3px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px) scale(1.03); /* HIGHLIGHT REDUCTION: Less aggressive hover effect */
+    box-shadow: 0 5px 8px -2px rgba(0, 0, 0, 0.15); /* Reduced shadow */
     background: linear-gradient(to right, var(--primary-dark), var(--secondary-dark));
 }
 
@@ -522,7 +540,8 @@ nav a:hover {
 
 /* Contact text/form styles adjusted for LIGHT background */
 .contact-info h3 {
-    font-size: 1.5rem;
+    /* TEXT SIZE REDUCTION: Reduced from 1.5rem to 1.3rem */
+    font-size: 1.3rem; 
     color: var(--gray-900); 
     margin-bottom: 1.5rem;
 }
@@ -531,6 +550,7 @@ nav a:hover {
     color: var(--gray-700); 
     line-height: 1.75;
     margin-bottom: 2rem;
+    /* TEXT SIZE REDUCTION: Inherits smaller body size */
 }
 
 .contact-item {
@@ -538,30 +558,31 @@ nav a:hover {
     align-items: center;
     gap: 1rem;
     transition: transform 0.3s ease;
-    padding: 10px;
+    padding: 8px; /* HIGHLIGHT REDUCTION: Reduced padding */
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Reduced shadow */
 }
 
 .contact-item:hover {
-    transform: translateX(5px);
+    transform: translateX(3px); /* HIGHLIGHT REDUCTION: Reduced hover translate */
 }
 
 .contact-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem; /* HIGHLIGHT/SIZE REDUCTION: Reduced from 3rem */
+    height: 2.5rem; /* HIGHLIGHT/SIZE REDUCTION: Reduced from 3rem */
     background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow */
     color: white;
 }
 
 .contact-label {
     color: var(--gray-600);
     margin-bottom: 0.25rem;
+    /* TEXT SIZE REDUCTION: Inherits smaller body size */
 }
 
 .contact-item a,
@@ -569,6 +590,7 @@ nav a:hover {
     color: var(--gray-900);
     text-decoration: none;
     transition: color 0.3s ease;
+    /* TEXT SIZE REDUCTION: Inherits smaller body size */
 }
 
 .contact-item a:hover {
@@ -596,18 +618,21 @@ nav a:hover {
     display: block;
     color: var(--gray-900); 
     margin-bottom: 0.5rem;
+    /* TEXT SIZE REDUCTION: Inherits smaller body size */
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.75rem 1rem;
+    /* TEXT SIZE REDUCTION: Reduced padding */
+    padding: 0.6rem 0.9rem; 
     background: var(--gray-50);
     border: 1px solid var(--gray-300);
     border-radius: 0.5rem;
     color: var(--gray-900); 
     font-family: var(--font-sans);
-    font-size: 1rem;
+    /* TEXT SIZE REDUCTION: Reduced from 1rem to 0.95rem */
+    font-size: 0.95rem; 
     transition: all 0.3s ease;
 }
 
@@ -620,8 +645,9 @@ nav a:hover {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color); 
-    box-shadow: 0 0 0 3px rgba(212, 58, 58, 0.3); 
-    transform: scale(1.01);
+    /* HIGHLIGHT REDUCTION: Reduced box-shadow spread */
+    box-shadow: 0 0 0 2px rgba(212, 58, 58, 0.3); 
+    transform: scale(1.005); /* HIGHLIGHT REDUCTION: Very subtle scale */
 }
 
 .form-group textarea {
@@ -630,24 +656,27 @@ nav a:hover {
 
 .submit-button {
     width: 100%;
-    padding: 1rem 1.5rem;
+    /* HIGHLIGHT/SIZE REDUCTION: Reduced padding */
+    padding: 0.8rem 1.3rem; 
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     color: white;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 1rem;
+    /* TEXT SIZE REDUCTION: Reduced from 1rem to 0.95rem */
+    font-size: 0.95rem; 
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(212, 58, 58, 0.5); 
+    /* HIGHLIGHT REDUCTION: Reduced box-shadow spread */
+    box-shadow: 0 8px 12px -2px rgba(212, 58, 58, 0.5); 
     transition: all 0.3s ease;
 }
 
 .submit-button:hover {
-    transform: scale(1.02);
+    transform: scale(1.01); /* HIGHLIGHT REDUCTION: Reduced hover scale */
     background: linear-gradient(to right, var(--primary-dark), var(--secondary-dark));
 }
 
@@ -659,6 +688,7 @@ nav a:hover {
     background: transparent;
     position: relative;
     z-index: 10;
+    /* TEXT SIZE REDUCTION: Inherits smaller body size */
 }
 
 /* Scroll Animations */
@@ -676,11 +706,13 @@ nav a:hover {
 /* Responsive Design */
 @media (min-width: 640px) {
     .hero-title {
-        font-size: 3.75rem;
+        /* TEXT SIZE REDUCTION: Reduced from 3.75rem to 3.2rem */
+        font-size: 3.2rem; 
     }
     
     .section-title {
-        font-size: 3rem;
+        /* TEXT SIZE REDUCTION: Reduced from 3rem to 2.5rem */
+        font-size: 2.5rem; 
     }
 }
 
@@ -704,17 +736,20 @@ nav a:hover {
     }
     
     .hero-title {
-        font-size: 4rem;
+        /* TEXT SIZE REDUCTION: Reduced from 4rem to 3.5rem */
+        font-size: 3.5rem; 
     }
 }
 
 @media (min-width: 1024px) {
     .hero-title {
-        font-size: 4.5rem;
+        /* TEXT SIZE REDUCTION: Reduced from 4.5rem to 4rem */
+        font-size: 4rem; 
     }
     
     .section-title {
-        font-size: 3rem;
+        /* TEXT SIZE REDUCTION: Reduced from 3rem to 2.5rem */
+        font-size: 2.5rem; 
     }
 }
 
@@ -722,7 +757,7 @@ nav a:hover {
 @media (max-width: 767px) {
     .hero {
         min-height: auto;
-        padding-top: 80px; 
+        padding-top: 65px; /* Reduced to match main padding-top */
         padding-bottom: 5rem;
     }
     .hero-content {
@@ -734,10 +769,12 @@ nav a:hover {
         margin-top: 20px;
     }
     .hero h1 {
-        font-size: 3rem;
+        /* TEXT SIZE REDUCTION: Reduced from 3rem to 2.5rem */
+        font-size: 2.5rem; 
     }
     .hero h2 {
-        font-size: 2rem;
+        /* TEXT SIZE REDUCTION: Reduced from 2rem to 1.75rem */
+        font-size: 1.75rem; 
     }
     .hero-photo img {
         width: 300px;
@@ -747,13 +784,15 @@ nav a:hover {
         padding: 15px 20px;
     }
     .logo {
-        font-size: 28px;
+        /* TEXT SIZE REDUCTION: Reduced from 28px to 25px */
+        font-size: 25px; 
     }
     nav ul {
         gap: 20px;
     }
     nav a {
-        font-size: 16px;
+        /* TEXT SIZE REDUCTION: Reduced from 16px to 15px */
+        font-size: 15px; 
     }
     .projects-grid, .skills-grid {
         grid-template-columns: 1fr;
