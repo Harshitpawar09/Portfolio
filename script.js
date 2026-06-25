@@ -308,4 +308,43 @@
     let rt;
     window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(resize, 200); });
   }
+
+  /* ---------- Project Modals ---------- */
+  const openModalBtns = document.querySelectorAll(".open-modal-btn");
+  const closeModalBtns = document.querySelectorAll(".project-modal__close");
+  const modals = document.querySelectorAll(".project-modal");
+
+  openModalBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const modalId = btn.getAttribute("data-modal");
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden"; // Prevent background scroll
+      }
+    });
+  });
+
+  const closeModal = (modal) => {
+    if (!modal) return;
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = ""; // Restore scroll
+  };
+
+  closeModalBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      closeModal(btn.closest(".project-modal"));
+    });
+  });
+
+  modals.forEach((modal) => {
+    const overlay = modal.querySelector(".project-modal__overlay");
+    if (overlay) {
+      overlay.addEventListener("click", () => {
+        closeModal(modal);
+      });
+    }
+  });
 })();
