@@ -609,6 +609,11 @@ a.contact-item-card__value:hover {
 }
 
 @media (max-width: 720px) {
+  .container { padding: 0 16px; }
+  .section { padding: 60px 0; }
+  .section__head { margin-bottom: 36px; }
+  
+  /* Navigation */
   .nav__links {
     position: fixed; top: 70px; right: 16px; left: 16px;
     flex-direction: column; align-items: stretch; gap: 6px; padding: 16px;
@@ -622,19 +627,49 @@ a.contact-item-card__value:hover {
   .nav__link { padding: 12px 14px; }
   .nav__link--cta { margin-left: 0; text-align: center; }
   .nav__toggle { display: flex; }
-  .section { padding: 80px 0; }
-  .hero__stats { gap: 28px; }
+  
+  /* Hero adjustments */
+  .hero { padding: 100px 16px 50px; min-height: auto; }
+  .hero__title { font-size: 2.2rem; }
+  .hero__typed { font-size: 1.25rem; margin-bottom: 20px; }
+  .hero__summary { font-size: 0.95rem; margin-bottom: 28px; }
+  .hero__stats { gap: 24px; }
+  
+  /* Cards compact padding */
+  .about__card { padding: 24px; }
+  .about__pill { padding: 16px; }
+  .skills__col { padding: 20px; }
+  .timeline__card { padding: 20px; }
+  .project { padding: 22px; }
+  .cert { padding: 16px; }
+  
+  /* Timeline adjustments */
+  .timeline { padding-left: 24px; }
+  .timeline__dot { left: -31px; width: 14px; height: 14px; top: 26px; }
+  .timeline__top { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .timeline__date { margin-top: 4px; }
+  
+  /* Contact card adjustments */
+  .contact-cta-card { padding: 28px; gap: 16px; }
+  .contact-cta-card__title { font-size: 1.4rem; }
+  .contact-cta-card__desc { font-size: 0.92rem; }
+  .contact-item-card { padding: 16px; gap: 14px; }
+  .contact-item-card__icon { width: 40px; height: 40px; }
+  .contact-item-card__icon svg { width: 18px; height: 18px; }
+  .contact-item-card__value { font-size: 0.88rem; }
+  
+  /* Layout columns stacking */
   .skills, .certs { grid-template-columns: 1fr; }
   .about__grid { grid-template-columns: 1fr 1fr; }
-  .timeline { padding-left: 30px; }
-  .timeline__dot { left: -26px; }
   .cursor-glow { display: none; }
 }
 
 @media (max-width: 420px) {
   .about__grid { grid-template-columns: 1fr; }
-  .hero__cta { flex-direction: column; width: 100%; }
+  .hero__cta { flex-direction: column; width: 100%; gap: 12px; }
   .hero__cta .btn { width: 100%; justify-content: center; }
+  .hero__title { font-size: 1.95rem; }
+  .timeline__role { font-size: 1.05rem; }
 }
 
 /* ---------- Reduced motion ---------- */
