@@ -57,11 +57,11 @@
   const typedEl = document.getElementById("typed");
   if (typedEl) {
     const phrases = [
-      "intelligent ML models.",
-      "data-driven solutions.",
-      "full-stack web apps.",
-      "clean, modern UIs.",
-      "AI that solves problems.",
+      "AIML Engineer",
+      "Graphic Designer",
+      "Full Stack Developer",
+      "Data Analyst",
+      "UI/UX Designer",
     ];
     let pi = 0, ci = 0, deleting = false;
 
