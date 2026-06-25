@@ -259,13 +259,19 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: 14px;
   color: #fff;
 }
-.hero__subtitle {
-  font-family: var(--font-head);
-  font-size: clamp(1.25rem, 3vw, 1.85rem);
-  font-weight: 600;
-  color: var(--blue);
-  margin-bottom: 20px;
+.hero__typed {
+  font-family: var(--font-head); font-weight: 600;
+  font-size: clamp(1.25rem, 3vw, 1.85rem); margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: flex-start; gap: 10px; flex-wrap: wrap;
+  min-height: 1.6em;
 }
+.hero__typed-prefix { color: var(--text-muted); }
+.hero__typed-text {
+  background: var(--grad-tri); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero__caret { color: var(--cyan); animation: blink 1s step-end infinite; font-weight: 300; }
+@keyframes blink { 50% { opacity: 0; } }
 .hero__summary {
   color: var(--text-muted);
   font-size: 1.05rem;
@@ -916,7 +922,7 @@ a.contact-item-card__value:hover {
   /* Hero adjustments */
   .hero { padding: 100px 0 50px; min-height: auto; }
   .hero__title { font-size: 2.3rem; }
-  .hero__subtitle { font-size: 1.35rem; margin-bottom: 16px; }
+  .hero__typed { font-size: 1.35rem; margin-bottom: 16px; }
   .hero__summary { font-size: 0.95rem; margin-bottom: 20px; }
   .hero__location { margin-bottom: 24px; }
   
