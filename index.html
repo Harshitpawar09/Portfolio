@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B0F19" />
+  <title>Harshit Buwade — AI/ML Engineer & Full-Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Harshit Buwade — Final-year B.Tech CSE (AI & ML) student specializing in Machine Learning, Data Analytics, and Full-Stack Development. Building innovative, technology-driven solutions." />
+  <meta name="author" content="Harshit Buwade" />
+  <meta name="keywords"
+    content="Harshit Buwade, AI Engineer, Machine Learning, Data Analyst, Full Stack Developer, Python, Portfolio, IPS Academy" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Harshit Buwade — AI/ML Engineer & Full-Stack Developer" />
+  <meta property="og:description"
+    content="Final-year B.Tech CSE (AI & ML) student building innovative, technology-driven solutions." />
+  <meta property="og:image" content="./public/profile.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- ===== Loading Screen ===== -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__ring"></div>
+    <div class="loader__name">HB</div>
+  </div>
+
+  <!-- ===== Scroll Progress Bar ===== -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ===== Cursor Glow ===== -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== Animated Background ===== -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-fx__grid"></div>
+    <div class="bg-fx__blob bg-fx__blob--1"></div>
+    <div class="bg-fx__blob bg-fx__blob--2"></div>
+    <div class="bg-fx__blob bg-fx__blob--3"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <!-- ===== Navbar ===== -->
+  <header class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-mark">HB</span>
+        <span class="nav__logo-text">Harshit Buwade</span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="#certifications" class="nav__link">Certifications</a>
+        <a href="./public/Harshit_Buwade_Resume.pdf" class="nav__link nav__link--cta" download="Harshit_Buwade_Resume.pdf" style="display: inline-flex; align-items: center; gap: 6px;">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Resume
+        </a>
+      </nav>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section id="hero" class="hero">
+      <div class="hero__inner">
+        <h1 class="hero__title reveal">
+          Hi, I&apos;m <span class="grad-text">Harshit Buwade</span>
+        </h1>
+        <div class="hero__typed reveal">
+          <span class="hero__typed-prefix">I build</span>
+          <span id="typed" class="hero__typed-text"></span>
+          <span class="hero__caret">|</span>
+        </div>
+        <p class="hero__summary reveal">
+          Final-year B.Tech CSE (AI &amp; ML) student with hands-on experience across AI,
+          Machine Learning, Data Analytics, and Software Development. Passionate about
+          developing innovative, technology-driven solutions.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="./public/Harshit_Buwade_Resume.pdf" id="download-resume" class="btn btn--primary magnetic" download="Harshit_Buwade_Resume.pdf">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download Resume
+          </a>
+          <a href="#contact" class="btn btn--ghost magnetic">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">01 — About</span>
+          <h2 class="section__title">A bit about <span class="grad-text">me</span></h2>
+        </div>
+        <div class="about">
+          <div class="about__card glass reveal">
+            <p class="about__lead">
+              I&apos;m a final-year Computer Science &amp; Engineering student specializing in
+              Artificial Intelligence &amp; Machine Learning at IPS Academy, Indore. I love
+              turning complex problems into clean, intelligent, and usable products.
+            </p>
+            <p class="about__text">
+              My journey blends engineering with entrepreneurship — from training ML models
+              and building full-stack platforms to founding an Entrepreneurship Cell and
+              representing top IIT E-Cells as a campus ambassador. I thrive at the
+              intersection of technology, design, and impact.
+            </p>
+            <div class="about__tags">
+              <span class="chip">AI &amp; ML</span>
+              <span class="chip">Data Analytics</span>
+              <span class="chip">UI/UX Design</span>
+              <span class="chip">Leadership</span>
+            </div>
+          </div>
+          <div class="about__grid">
+            <div class="about__pill glass reveal">
+              <div class="about__pill-icon">🎯</div>
+              <h3>Career Goal</h3>
+              <p>Build innovative, technology-driven solutions at a top engineering team.</p>
+            </div>
+            <div class="about__pill glass reveal">
+              <div class="about__pill-icon">🧠</div>
+              <h3>Interests</h3>
+              <p>Machine Learning, predictive modeling, data analysis &amp; product design.</p>
+            </div>
+            <div class="about__pill glass reveal">
+              <div class="about__pill-icon">⚡</div>
+              <h3>Strengths</h3>
+              <p>Critical thinking, ownership, fast learning &amp; cross-team collaboration.</p>
+            </div>
+            <div class="about__pill glass reveal">
+              <div class="about__pill-icon">🌍</div>
+              <h3>Languages</h3>
+              <p>English, Hindi &amp; French.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">02 — Skills</span>
+          <h2 class="section__title">Things I <span class="grad-text">work with</span></h2>
+        </div>
+        <div class="skills">
+          <!-- Column 1: AI & Data Science -->
+          <div class="skills__col glass reveal">
+            <h3 class="skills__cat">🧠 AI &amp; Data Science</h3>
+            <div class="skills__tags-wrap">
+              <span class="tech">Python</span>
+              <span class="tech">Pandas</span>
+              <span class="tech">NumPy</span>
+              <span class="tech">Scikit-learn</span>
+              <span class="tech">NLP</span>
+              <span class="tech">Matplotlib</span>
+              <span class="tech">Seaborn</span>
+              <span class="tech">Kaggle</span>
+            </div>
+          </div>
+
+          <!-- Column 2: Full-Stack Development -->
+          <div class="skills__col glass reveal">
+            <h3 class="skills__cat">💻 Full-Stack Dev</h3>
+            <div class="skills__tags-wrap">
+              <span class="tech">React.js</span>
+              <span class="tech">Django</span>
+              <span class="tech">SQL</span>
+              <span class="tech">PostgreSQL</span>
+              <span class="tech">MongoDB</span>
+              <span class="tech">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Column 3: Cloud & Tools -->
+          <div class="skills__col glass reveal">
+            <h3 class="skills__cat">⚙️ Cloud &amp; Tools</h3>
+            <div class="skills__tags-wrap">
+              <span class="tech">C++</span>
+              <span class="tech">Microsoft Azure</span>
+              <span class="tech">AWS</span>
+              <span class="tech">Render</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">03 — Experience</span>
+          <h2 class="section__title">Where I&apos;ve <span class="grad-text">worked</span></h2>
+        </div>
+
+        <div class="timeline">
+          <!-- AIML Intern -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <div class="timeline__top">
+                <h3 class="timeline__role">AIML Intern</h3>
+                <span class="timeline__date">May 2026 – Jun 2026</span>
+              </div>
+              <p class="timeline__company">MindCoders · Indore, India</p>
+              <ul class="timeline__points">
+                <li>Developed AI/ML projects and predictive models using Python.</li>
+                <li>Performed data preprocessing, model training, and evaluation.</li>
+                <li>Collaborated on real-world, industry-focused AI solutions.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Predictive Modeling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Campus Ambassador (IIT Delhi) -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <div class="timeline__top">
+                <h3 class="timeline__role">Campus Ambassador</h3>
+                <span class="timeline__date">Dec 2025 – Feb 2026</span>
+              </div>
+              <p class="timeline__company">eDC IIT Delhi</p>
+              <ul class="timeline__points">
+                <li>Promoted entrepreneurship events and initiatives.</li>
+                <li>Coordinated student outreach and community engagement.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag">Leadership</span><span class="tag">Outreach</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Campus Ambassador (IIT Kanpur) -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <div class="timeline__top">
+                <h3 class="timeline__role">Campus Ambassador</h3>
+                <span class="timeline__date">Dec 2025 – Feb 2026</span>
+              </div>
+              <p class="timeline__company">E-Cell IIT Kanpur</p>
+              <ul class="timeline__points">
+                <li>Represented entrepreneurship initiatives on campus.</li>
+                <li>Supported event promotions and participation drives.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag">Leadership</span><span class="tag">Outreach</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Azure Intern -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <div class="timeline__top">
+                <h3 class="timeline__role">AI Azure Intern</h3>
+                <span class="timeline__date">May 2025 – Jun 2025</span>
+              </div>
+              <p class="timeline__company">Edunet Foundation</p>
+              <ul class="timeline__points">
+                <li>Learned Artificial Intelligence concepts using Microsoft Azure services.</li>
+                <li>Explored cloud-based AI tools and machine learning workflows.</li>
+                <li>Built and tested AI-driven solutions through guided projects.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag">Microsoft Azure</span><span class="tag">Cloud AI</span><span class="tag">ML Workflows</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Founder & Team Lead, E-Cell -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <div class="timeline__top">
+                <h3 class="timeline__role">Founder &amp; Team Lead</h3>
+                <span class="timeline__date">Aug 2024 – Present</span>
+              </div>
+              <p class="timeline__company">Entrepreneurship Cell, IPS Academy</p>
+              <ul class="timeline__points">
+                <li>Founded and led the E-Cell, managing student teams and initiatives.</li>
+                <li>Organized startup events, workshops, and industry networking sessions.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag">Leadership</span><span class="tag">Management</span><span class="tag">Team Building</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Campus Ambassador (IIT Bombay) -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <div class="timeline__top">
+                <h3 class="timeline__role">Campus Ambassador</h3>
+                <span class="timeline__date">Jul 2024 – Jan 2025</span>
+              </div>
+              <p class="timeline__company">E-Cell IIT Bombay</p>
+              <ul class="timeline__points">
+                <li>Promoted entrepreneurship programs and campus engagement.</li>
+                <li>Increased student participation via digital outreach campaigns.</li>
+              </ul>
+              <div class="timeline__tags">
+                <span class="tag">Leadership</span><span class="tag">Marketing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">04 — Projects</span>
+          <h2 class="section__title">Things I&apos;ve <span class="grad-text">built</span></h2>
+        </div>
+
+        <div class="projects">
+          <article class="project glass tilt reveal">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__icon">🌿</span>
+              <span class="project__type">AI · Plant Care</span>
+            </div>
+            <h3 class="project__title">PaudhaMitra</h3>
+            <p class="project__desc">An AI-powered plant care platform with disease detection and health
+              recommendations, helping users keep plants healthy.</p>
+            <p class="project__detail"><strong>Highlights:</strong> Trained &amp; deployed an ML model on plant disease
+              datasets, integrated weather-based insights, and shipped a responsive web app.</p>
+            <div class="project__tags">
+              <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Tailwind
+                CSS</span><span class="tag">Render</span><span class="tag">Kaggle</span>
+            </div>
+          </article>
+
+          <article class="project glass tilt reveal">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__icon">🐾</span>
+              <span class="project__type">AI · Classification</span>
+            </div>
+            <h3 class="project__title">Wildlife Species Identifier</h3>
+            <p class="project__desc">A classification system that identifies wildlife species directly from footprint
+              images.</p>
+            <p class="project__detail"><strong>Highlights:</strong> Applied image processing &amp; ML techniques and
+              improved identification accuracy through feature engineering.</p>
+            <div class="project__tags">
+              <span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Image
+                Processing</span>
+            </div>
+          </article>
+
+          <article class="project glass tilt reveal">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__icon">🗑️</span>
+              <span class="project__type">AI · Smart Cities</span>
+            </div>
+            <h3 class="project__title">Garbage Overflow Predictor</h3>
+            <p class="project__desc">An AI-powered smart waste management system that predicts garbage bin overflow.</p>
+            <p class="project__detail"><strong>Highlights:</strong> Built an ML model generating overflow predictions to
+              support efficient, data-driven waste collection.</p>
+            <div class="project__tags">
+              <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span
+                class="tag">Scikit-learn</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span>
+            </div>
+          </article>
+
+          <article class="project glass tilt reveal">
+            <div class="project__glow"></div>
+            <div class="project__head">
+              <span class="project__icon">🧘</span>
+              <span class="project__type">Full-Stack · Wellness</span>
+            </div>
+            <h3 class="project__title">MindCare</h3>
+            <p class="project__desc">An AI-driven mental wellness platform for mental health support and wellness
+              tracking.</p>
+            <p class="project__detail"><strong>Highlights:</strong> Integrated chatbot assistance, mood tracking, and
+              counselor booking inside a secure, user-friendly peer-support system.</p>
+            <div class="project__tags">
+              <span class="tag">React.js</span><span class="tag">Django</span><span class="tag">MongoDB</span><span
+                class="tag">Python</span><span class="tag">NLP</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">05 — Education</span>
+          <h2 class="section__title">My <span class="grad-text">education</span></h2>
+        </div>
+
+        <div class="timeline timeline--single">
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card glass">
+              <div class="timeline__top">
+                <h3 class="timeline__role">B.Tech — Computer Science &amp; Engineering (AI &amp; ML)</h3>
+                <span class="timeline__date">Sep 2023 – Aug 2027</span>
+              </div>
+              <p class="timeline__company">Institute of Engineering and Science, IPS Academy · Indore, India</p>
+              <div class="edu__meta">
+                <span class="edu__cgpa">CGPA <strong>7.9</strong></span>
+                <span class="edu__grad">Expected Graduation: Aug 2027</span>
+              </div>
+              <div class="timeline__tags">
+                <span class="tag">Artificial Intelligence</span><span class="tag">Machine Learning</span><span
+                  class="tag">Data Structures &amp; Algorithms</span><span class="tag">DBMS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Certifications ===== -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow">06 — Certifications</span>
+          <h2 class="section__title">Certificates &amp; <span class="grad-text">achievements</span></h2>
+        </div>
+
+        <div class="certs" id="certs-grid">
+          <!-- populated by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="contact-pill">CONTACT</span>
+          <h2 class="section__title">Let&apos;s build something <span class="grad-text">intelligent</span></h2>
+          <p class="section__sub">Open to internships, hackathons, and AI/ML engineering opportunities. I&apos;d love to hear from you.</p>
+        </div>
+
+        <div class="contact-grid reveal">
+          <!-- Left side: contact items list -->
+          <div class="contact-links">
+            <div class="contact-item-card glass">
+              <div class="contact-item-card__icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-item-card__details">
+                <span class="contact-item-card__label">EMAIL</span>
+                <a href="mailto:buwadeharshit9@gmail.com" class="contact-item-card__value">buwadeharshit9@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item-card glass">
+              <div class="contact-item-card__icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div class="contact-item-card__details">
+                <span class="contact-item-card__label">LINKEDIN</span>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="contact-item-card__value">in/harshit-buwade</a>
+              </div>
+            </div>
+
+            <div class="contact-item-card glass">
+              <div class="contact-item-card__icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </div>
+              <div class="contact-item-card__details">
+                <span class="contact-item-card__label">GITHUB</span>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="contact-item-card__value">@harshitbuwade</a>
+              </div>
+            </div>
+
+            <div class="contact-item-card glass">
+              <div class="contact-item-card__icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact-item-card__details">
+                <span class="contact-item-card__label">LOCATION</span>
+                <span class="contact-item-card__value">Indore, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Have a project card -->
+          <div class="contact-cta-card glass">
+            <h3 class="contact-cta-card__title">Have a project or role in mind?</h3>
+            <p class="contact-cta-card__desc">
+              Whether it&apos;s an internship, a hackathon team, or an AI/ML engineering opportunity, my inbox is always open. I&apos;ll get back to you as soon as I can.
+            </p>
+            <a href="mailto:buwadeharshit9@gmail.com" class="btn btn--primary magnetic contact-cta-card__btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; transform: rotate(-25deg);">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+              Get in touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-mark">HB</span>
+        <div>
+          <p class="footer__name">Harshit Buwade</p>
+          <p class="footer__tag">AI/ML Engineer &amp; Full-Stack Developer</p>
+        </div>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__social">
+        <a href="mailto:buwadeharshit9@gmail.com" aria-label="Email">✉️</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Harshit Buwade. Built with passion in Indore, India.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
